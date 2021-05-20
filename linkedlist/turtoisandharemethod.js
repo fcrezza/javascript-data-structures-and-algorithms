@@ -5,37 +5,37 @@
  */
 
 class Node {
-	constructor(data, next) {
-		this.data = data;
-		this.next = next;
-	}
+  constructor(data, next) {
+    this.data = data;
+    this.next = next;
+  }
 }
 
 class List {
-	constructor() {
-		this.head = null;
-	}
+  constructor() {
+    this.head = null;
+  }
 
-	push(data) {
-		const newNode = new Node(data, this.head);
-		this.head = newNode;
-	}
+  push(data) {
+    const newNode = new Node(data, this.head);
+    this.head = newNode;
+  }
 
-	check() {
-		let turtoise = this.head;
-		let hare = this.head;
+  check() {
+    let turtoise = this.head;
+    let hare = this.head;
 
-		while (hare.next) {
-			turtoise = turtoise.next;
-			hare = hare.next.next;
+    while (hare.next) {
+      turtoise = turtoise.next;
+      hare = hare.next.next;
 
-			if (hare === turtoise) {
-				return true;
-			}
-		}
+      if (hare === turtoise) {
+        return true;
+      }
+    }
 
-		return false;
-	}
+    return false;
+  }
 }
 
 const list1 = new List();

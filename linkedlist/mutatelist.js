@@ -5,38 +5,38 @@
  */
 
 class Node {
-	constructor(data, next) {
-		this.data = data;
-		this.next = next;
-		this.flag = false;
-	}
+  constructor(data, next) {
+    this.data = data;
+    this.next = next;
+    this.flag = false;
+  }
 }
 
 class List {
-	constructor() {
-		this.head = null;
-	}
+  constructor() {
+    this.head = null;
+  }
 
-	push(data) {
-		const newNode = new Node(data, this.head);
-		this.head = newNode;
-	}
+  push(data) {
+    const newNode = new Node(data, this.head);
+    this.head = newNode;
+  }
 
-	check() {
-		let currentNode = this.head;
+  check() {
+    let currentNode = this.head;
 
-		while (currentNode) {
-			if (currentNode.flag) {
-				return true;
-			}
+    while (currentNode) {
+      if (currentNode.flag) {
+        return true;
+      }
 
-			currentNode.flag = true;
+      currentNode.flag = true;
 
-			currentNode = currentNode.next;
-		}
+      currentNode = currentNode.next;
+    }
 
-		return false;
-	}
+    return false;
+  }
 }
 
 const list = new List();

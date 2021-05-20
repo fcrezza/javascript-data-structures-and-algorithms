@@ -15,8 +15,7 @@ export default class Stack {
 
   remove() {
     if (!this.isEmpty()) {
-      this.stack.pop();
-      return;
+      return this.stack.pop();
     }
 
     console.log("stack is empty");
@@ -34,13 +33,3 @@ export default class Stack {
     return this.stack.length === 0;
   }
 }
-
-const stackObj = new Stack(5);
-stackObj.add(1);
-stackObj.add(2);
-stackObj.add(3);
-stackObj.add(4);
-stackObj.remove();
-stackObj.add(5);
-stackObj.add(6);
-// console.log(stackObj.top());
